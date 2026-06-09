@@ -113,24 +113,52 @@ a:hover { text-decoration: underline; }
 .site-banner {
   margin-top: var(--nav-h);
   background: var(--bg-dark);
-  padding: 56px 0 60px;
-  text-align: center;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  padding: 36px 0;
 }
+.banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
+.banner-mark {
+  background: #fff;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.45);
+}
+.bm-h  { font-size: 2.1rem; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
+.bm-aic { font-size: 2.1rem; font-weight: 800; color: var(--teal); letter-spacing: -0.02em; }
+.banner-text { text-align: left; }
 .banner-title {
-  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 800;
   color: #fff;
   letter-spacing: -0.02em;
   line-height: 1;
 }
+.banner-title .teal { color: var(--teal); }
 .banner-sub {
-  font-size: clamp(0.8rem, 2vw, 1.25rem);
+  font-size: clamp(0.75rem, 1.8vw, 1.1rem);
   font-weight: 500;
   color: var(--teal);
   letter-spacing: 0.5em;
   text-transform: uppercase;
-  margin-top: 16px;
-  padding-right: 0.5em; /* optical compensation for letter-spacing */
+  margin-top: 14px;
+  padding-right: 0.5em;
+}
+
+@media (max-width: 600px) {
+  .banner-inner { gap: 24px; }
+  .banner-mark { width: 80px; height: 80px; }
+  .bm-h, .bm-aic { font-size: 1.5rem; }
 }
 
 /* ══════════════════════════════════════════
