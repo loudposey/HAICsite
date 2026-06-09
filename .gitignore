@@ -1,0 +1,6 @@
+# Source documents (not for public repo)
+*.pdf
+*.docx
+*.xlsx
+*.txt
+assets/images/
